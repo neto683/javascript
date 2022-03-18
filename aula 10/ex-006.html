@@ -8,20 +8,38 @@
     <style>
         div#area{
             background-color: green;
-            color: white4;
-            border: 1px solid black;
-            width: 100px;
-            height: 100px;
+            color: white;
+            width: 200px;
+            height: 200px;
             padding: 10px;
             text-align: center;
-            line-height: 100px;
-            font-size: 18pt;
+            line-height: 200px;
+            font-size: 20pt;
         }
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onmouseenter="soltar()" onmouseout="sair()">
         interaja...
     </div>
+     <!-- para coloca eventos no seu elemento q nesse exemplo é uma div colocamos a função no local apois o id oq queremos, logo em seguida criamos uma variavel e colocamos fora da function para q a variavel sirva para todas as funçõe, se eu não fizesse isso teria quer fazer uma variavel para cada function( função)
+     quando eu colocar o evento tenho q coloca um parametro() pode ser qualquer ação clicar(), mover(), sair() ou  entrar()  a ligação só é feita quando colocamos function e o parametro() exemplos em baixxo function sair()-->
+
+     <!-- Dessa primeira maneira fica muito poluio o HTML então vou apagar a funcção clicar la do HTML e faz essa função diretamento no javaScript usand o addEventListener... faço praticamente a mesma coisa coloco uma variavel ai coloco uma function clicar() dentro coloco a variavem.addEventListener('o evento ex click ou onmouseout', o parametro e aki não precisa coloca o parenteses) mais quando for colocar o parameto depois da functoion precisa dos parenteses SIM!!!  olha o exemplo a baixo-->
+    <script>
+         var a = window.document.getElementById('area')
+         a.addEventListener('click',clicar)
+        function clicar(){
+            a.innerText ='consegui'
+            a.style.backgroundColor = 'red'
+        }
+        function soltar(){
+            a.innerText = 'entrou!'
+        }
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.backgroundColor = 'green'
+        }
+    </script>
 </body>
 </html>
