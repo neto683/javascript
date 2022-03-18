@@ -18,12 +18,32 @@
     <h1>Iniciando estudos com DOM</h1>
     <p >Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript </p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
-       window.document.body.getElementsByTagName('p')[0].style.color = ''
-       
-    
+        window.document.write('olá mundo!! </br> </br>') // write é para mostra na minha tela, não é a melhor maneira.
+        window.document.write()// para mostrar eu coloco o comando window.document.write(aki completo com oq quero mostrar)
 
+        /* para selecionar meus elementos q são tudo q esta na arvora DOM usamos getElementsByTagName*/
+       var p1 = window.document.getElementsByTagName('p')[0]// eu crio uma variavel onde eu vou querer mecher.. depois mando mostrar
+        window.document.write('Está escrito assim:'+ p1.innerText)// innerText é o texto q ta dentro de p1 aki no exemplo. innerHtml vai o comando completo. Exemplo se tiver negrito no innerText n vai junto mais no innerHtml vai
+
+        // exemplo numero 2 mechendo no backgroudcolor do h1 usando DOM
+
+        var titolo = window.document.getElementsByTagName('h1')[0]
+        // para mudar alguma caracteristica é só coloca a variavel.style.oq vc quer fazer ='e coloca entre'
+        titolo.style.backgroundColor= 'black'
+        titolo.style.fontSize='3em'
+        //exemplo numero 3 mudando a cor do corpo(body). crio uma var do um nome = onde vou mecher 
+        var corpo = window.document.body
+        corpo.style.backgroundColor = 'green'
+        window.alert(p1.innerHTML) // para dar alertas ou prompt coloca antes, desa mmaneira 
+        window.prompt(p1.innerHTML)
+         
+
+        // usando o modo de seleciona ID, getElementById(''), tendo o class e seletr
+        var d = window.document.getElementById('msg')
+        d.style.backgroundColor = 'blue'
+        
 
 
     </script>
