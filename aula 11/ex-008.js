@@ -5,3 +5,4 @@ if (vel > 60){ // condição simple por nao ter o se não
 }
 
 console.log(`Tenha um bom dia!`)
+
