@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>De qual pais você é??</h1>
+    <p>Digite seu pais aki: <input type="text" name="cpais" id="cpais"> <input type="button" value="verificar"></p>
+    <div id="res"></div>
+    <script>
+        addEventListener('click',verificar)
+        function verificar(){
+            var txt = window.document.getElementById('cpais')
+            var y = (txt.value)
+            var x = window.document.getElementById('res')
+            x.innerHTML = `<p>seu pais é: ${y}</p>`
+            if(y=='Brasil'){
+                x.innerHTML+=`<p> vove é do ${y} então é Brasileiro</p>`
+            }else{
+                x.innerHTML+= '<p>estrangeiro</p>'
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+       <p><label for="cNome">Digite seu numero aki</label></p> <input type="number" name="cNome" id="cNome" min="0" max="100">
+       <input type="button" value="VERIFICAR">
+       <div  id="res">
+       </div>
+       <div id="condição"></div>
+       <script>
+           addEventListener('click',somar)
+           function somar(){
+           var n = window.document.getElementById('cNome')
+           var soma = Number(n.value)
+           var r = window.document.getElementById('res')
+           r.innerHTML = `<p>sua velocidade é de ${soma} km/h</p>`
+           if(soma > 89){
+               r.innerHTML+= `<p> voce foi multado pois sua velocdade de ${soma}km/h e a maxima permitida é 85km/h`
+           }
+           r.innerHTML+=`<p>BOM DIA</p>`
+        }
+
+        
+       </script>
+
+</body>
+</html>
