@@ -13,12 +13,13 @@
   </header>
   <main>
     <section>
-      <p><label for="cNum">Ano de nascimento:</label> <input type="number" name="cNum" id="cNum"></p>
-      <p><label for="">sexo:</label> <input type="radio" name="cSex" id="cMasc">Mascolino<input type="radio" name="cSex" id="cFem">Feminino</p>
+      <p><label for="cNum">Ano de nascimento:</label> <input type="number" name="cNum" id="cNum" min="0 "></p>
+      <p><label for="cSex">sexo:</label> <input type="radio" name="cSex" id="cMasc" checked><label for="cMasc" >Mascolino</label><input type="radio" name="cSex" id="cFem"><label for="cFem">Feminino</label></p>
       <input type="button" value="verificar" id="botao" onclick="clicar()">
-      <p>preencha os dados a cima para ver o resultado!!!</p>
     </section>
-    <section>
+    <p>preencha os dados a cima para ver o resultado!!!</p>
+    <section id="res">
+  <img id="mulher" src="imagens/mulher-adulta.png" alt="">
     </section>
   </main>
     
