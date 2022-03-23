@@ -7,3 +7,8 @@ if(idade>=18){
   console.log('Não pode votar, menor de idade')
 }
 
+
+
+
+
+
