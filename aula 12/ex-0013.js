@@ -34,3 +34,10 @@ switch(diaSem){
         console.log('Sabado')
         break
 }//  o switch é muito boa para testar dados pontuais, para intervalos é muito melhor usar if, else if,else...  só funciona com numeros inteiros e com strings os switch...
+
+
+
+
+
+
+
